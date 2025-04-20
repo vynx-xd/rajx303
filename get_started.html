@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>rajxriot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff4e50, #f9d423);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 60px 70px;
+      border-radius: 25px;
+      text-align: center;
+      max-width: 700px;
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: textFadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 35px;
+      line-height: 1.6;
+      opacity: 0.9;
+      animation: fadeInUp 1.5s ease-out;
+    }
+
+    @keyframes textFadeIn {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 40px;
+      background-color: #fff;
+      color: #ff4e50;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.4s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .button:hover {
+      background-color: #ff4e50;
+      color: white;
+      transform: scale(1.1);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      animation: glowPulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 25px 15px rgba(255, 255, 255, 1);
+      }
+      100% {
+        box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    .insta-tag {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: white;
+      animation: fadeInUp 2s ease-out;
+    }
+
+    .insta-tag a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .insta-tag a:hover {
+      color: #fcb045;
+    }
+
+    .phone-tag {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: white;
+      animation: fadeInUp 2s ease-out;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 35px 25px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .button {
+        padding: 12px 28px;
+        font-size: 1rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>No Limits. No Excuses!</h1>
+    <p>Welcome to the beginning of something extraordinary — where your vision meets action, your passion meets purpose, and every step you take becomes part of a masterpiece in the making.</p>
+    <a href="{{ url_for('home') }}" class="button">Back Home</a>
+    <a href="{{ url_for('third') }}" class="button">Let's Begin</a>
+
+
+
+
+
+  </div>
+
+  <div class="insta-tag">
+    <a href="https://instagram.com/your_username" target="_blank">@VYNX_XD.303</a>
+  </div>
+
+  <div class="phone-tag">
+    For Help: +91 7096089866 [ADMIN: RAJ]
+  </div>
+</body>
+</html>

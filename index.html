@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAJX Universe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(270deg, rgb(0,0,51), rgb(51,0,102), rgb(0,51,102));
+      background-size: 600% 600%;
+      animation: gradientBG 20s ease infinite;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header {
+      padding: 60px 20px 30px;
+      width: 100%;
+      animation: fadeIn 2s ease-in;
+      position: relative;
+      z-index: 2;
+    }
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 25px;
+      letter-spacing: 1.5px;
+      text-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    }
+    .tagline {
+      font-size: 1.2rem;
+      margin: 0 auto 35px;
+      max-width: 950px;
+      line-height: 1.6;
+      padding: 20px 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+      color: transparent;
+      background-image: linear-gradient(45deg, #00f0ff, #ff00c8, #00ff94);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      animation: fadeInUp 2.5s ease-out;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    }
+    .button {
+      padding: 16px 40px;
+      background-color: #fff;
+      color: #330066;
+      font-size: 1.2em;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      animation: slideIn 2s ease-out;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #330066;
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    }
+    section {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 40px auto;
+      padding: 40px 20px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 900px;
+      animation: fadeInUp 2.5s ease forwards;
+      z-index: 2;
+    }
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 25px 20px;
+      font-size: 1rem;
+      color: #ccc;
+      width: 100%;
+      animation: fadeIn 3s ease-in;
+      z-index: 2;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #f39c12;
+    }
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+      opacity: 0.15;
+      z-index: 0;
+      pointer-events: none;
+      animation: twinkle 100s linear infinite;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateX(50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes twinkle {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.3em;
+      }
+      .tagline {
+        font-size: 1rem;
+        padding: 15px 20px;
+        max-width: 90%;
+      }
+      .button {
+        padding: 12px 28px;
+        font-size: 1rem;
+      }
+      section {
+        padding: 25px 15px;
+      }
+      footer {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <header>
+    <h1>Welcome to RAJX Universe</h1>
+    <p class="tagline">
+      Where creativity meets the cosmos. Dive into this beautifully animated site built with Flask and love for space and code.
+    </p>
+    <a href="{{ url_for('get_started') }}" class="button">Get Started</a>
+
+
+  </header>
+  <section>
+    <h2>Life is a journey, and every moment is a chance to create your own masterpiece</h2>
+    <p>Welcome to the beginning of something extraordinary — where your vision meets action, your passion meets purpose, and every step you take becomes part of a masterpiece in the making.</p>
+  </section>
+  <section>
+    <h2>Key Features</h2>
+    <p>
+      🚀 Smooth cosmic animations<br>
+      🌌 Dynamic Flask-powered backend<br>
+      🪐 Expandable for blogs, portfolios, and more<br>
+      🌟 Mobile responsive with stylish effects<br>
+      🔭 Learning-friendly + futuristic design
+    </p>
+  </section>
+  <footer>
+    <p>&copy; 2025 RAJX Universe. Made with ✨ and ❤️ | <a href="https://instagram.com/your_username" target="_blank">@Rajdeep</a></p>
+  </footer>
+</body>
+</html>
